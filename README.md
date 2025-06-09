@@ -1,33 +1,36 @@
-# React + TypeScript + Vite
+# Candidate Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
-
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-* Configure the top-level `parserOptions` property as follows:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+This is a React + TypeScript application that allows users to browse and save potential candidates from GitHub. Users can view candidate details, accept or reject candidates, and see a list of saved potential candidates. The application uses the GitHub API and requires a personal access token for authentication.
 
 ---
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+## Features
+
+- **Candidate Search:** View one candidate at a time with details including name, username, location, avatar, email, GitHub profile URL, and company.
+- **Accept/Reject Candidates:** Use "+" to save a candidate or "-" to skip.
+- **Saved Candidates:** View a list of all accepted candidates.
+- **Persistence:** Saved candidates persist across page reloads using localStorage.
+- **No Candidates Handling:** Displays appropriate messages when there are no more candidates to review or no saved candidates.
+
+---
+
+## Screenshots
+
+![Candidate Search Homepage]
+![Potential Candidates Page]
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+- A GitHub Personal Access Token (fine-grained, default permissions)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name/Develop
