@@ -40,10 +40,13 @@ const CandidateSearch: React.FC = () => {
 
   // Save accepted candidate to localStorage
   const saveCandidate = (candidate: Candidate) => {
-    const saved = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]");
+  const saved: Candidate[] = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]");
+  // Prevent duplicates by id
+  if (!saved.some((c) => c.id === candidate.id)) {
     saved.push(candidate);
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(saved));
-  };
+  }
+};
 
   const handleAccept = () => {
     if (candidates[currentIndex]) {
